@@ -2,7 +2,7 @@ const { log } = require('console');
 const express = require('express');
 const mongoose = require('mongoose');
 
-const stuffRoutes = require('./routes/stuff.js');
+const stuffRoutes = require('./routes/stuff.js')
 
 mongoose.connect('mongodb+srv://conseilandtechGoToFullStack:sPOFDGwtUFZp5N39@gotofullstack.ckprrkj.mongodb.net/?retryWrites=true&w=majority',
     {
@@ -24,7 +24,6 @@ app.use((req, res, next) => {
 
 app.use(express.json());
 
-app.use('.api/stuff', stuffRoutes)
-
+app.use('/api/stuff', stuffRoutes)
 
 module.exports = app;

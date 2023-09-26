@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router();
 
-const Thing = require('../models/Thing')
+const Thing = require('../models/Thing.js')
 
 router.post('/', (req, res, next) => {
     delete req.body._id;
@@ -36,4 +36,4 @@ router.get('/', (req, res, next) => {
         .catch(error => res.status(400).json({ error }))
 });
 
-module.export = router;
+module.exports = router;
