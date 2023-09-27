@@ -14,6 +14,6 @@ router.delete('/:id', auth, stuffCtrl.deleteThing);
 
 router.get('/:id', auth, stuffCtrl.getOneThing);
 
-router.get('/', stuffCtrl.getAllThing);
+router.get('/', auth, stuffCtrl.getAllThing);
 
 module.exports = router;
